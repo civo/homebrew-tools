@@ -2,10 +2,10 @@ require "formula"
 
 class Civo < Formula
   desc "CLI for managing Civo resources"
-  homepage "https://github.com/civo/civogo"
-  url "https://github.com/civo/civogo/releases/download/v0.1.4/fed-cli-darwin-amd64-0.1.4.tar.gz"
-  sha256 "c4bb34abd18ef743572c085fcbaf0a4d5c0770a7c889ae5ce422213bb35e80d4"
-  head "https://github.com/civo/civogo.git"
+  homepage "https://github.com/civo/cli-go"
+  url "https://github.com/civo/cli-go/releases/download/v0.1.5/civo_0.1.5_darwin_amd64.tar.gz"
+  sha256 "c7dcd4a8ce25adeaf707acabc099789ac68cdaff29f8f1115118c30070280cbd"
+  head "https://github.com/civo/cli-go.git"
 
   def install
     bin.install "civo"
@@ -13,6 +13,6 @@ class Civo < Formula
 
   # Homebrew requires tests.
   test do
-    assert_match "Civo version 1.0.0", shell_output("#{bin}/fed -v", 2)
+    assert_match "0.1.5", shell_output("#{bin}/civo version -q", 2)
   end
 end
