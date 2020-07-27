@@ -7,17 +7,17 @@ class Civo < Formula
 
   if OS.mac?
     url "https://github.com/civo/cli/releases/download/v0.6.18/civo-0.6.18-darwin-amd64.tar.gz"
-    sha256 "1d7e23a23dce9096da341773838815d8bc104cf27530ed4f869e359b0edc7ae2"
+    sha256 "6ecf9ce45803bce01aacc63c138c528889d8e910b6d13e578bfcca7d7f4891ff"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/civo/cli/releases/download/v0.6.18/civo-0.6.18-linux-amd64.tar.gz"
-      sha256 "b3e0fbbf40247827f90a48f6fe4f84be321bfe979a07e56631afcfabe09b0adb"
+      sha256 "464358f6377195b88f7a89790162528f48ff5f04c0e29444cc3a50f3555c8f3e"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
       else
         url "https://github.com/civo/cli/releases/download/v0.6.18/civo-0.6.18-linux-arm.tar.gz"
-        sha256 "c0c4705e7c896a5800a42c2cf77db374a4d4974efc027c6d1d7f59b75f8ddb99"
+        sha256 "1a3d02d2fc077c79c7a03b28cde20463a8f378d7b98c69ff8063be009e3a1816"
       end
     end
   end
