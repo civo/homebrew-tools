@@ -5,24 +5,24 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "0.7.0"
+  version "0.7.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/civo/cli/releases/download/v0.7.0/civo-0.7.0-darwin-amd64.tar.gz"
-    sha256 "89da3dcd404f389063964199ca2f3615f3bc067f808cfaead2da7b930ed1d458"
+    url "https://github.com/civo/cli/releases/download/v0.7.1/civo-0.7.1-darwin-amd64.tar.gz"
+    sha256 "7150e101cfc80db025880df97c7dd6f69525223ee29e2bab47ca2286f45c447a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/civo/cli/releases/download/v0.7.0/civo-0.7.0-linux-amd64.tar.gz"
-    sha256 "f29e208128f5bc0d532ecbf5bdd511cff71871861fa29751d1bd33920e3e5dd1"
+    url "https://github.com/civo/cli/releases/download/v0.7.1/civo-0.7.1-linux-amd64.tar.gz"
+    sha256 "7b96fd95f73af3abc78722fd04d7bb3dc360588078fd89ea03f40f6062c7a36e"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.0/civo-0.7.0-linux-arm.tar.gz"
-    sha256 "7d5b0866ad9a421e1bf374fb2bb4c8525a7a86a701a7c445df5aedf54cdd884b"
+    url "https://github.com/civo/cli/releases/download/v0.7.1/civo-0.7.1-linux-arm.tar.gz"
+    sha256 "5a3dfbd86134ee6b2b3129fd0680707792700f0c887f53792974b455d794b402"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.0/civo-0.7.0-linux-arm64.tar.gz"
-    sha256 "38a165ababcdb513a8e7241265483145466f0be8b6bb6b8e79362510dbceefc2"
+    url "https://github.com/civo/cli/releases/download/v0.7.1/civo-0.7.1-linux-arm64.tar.gz"
+    sha256 "6a30475af2374295414a100037741614494ed0696e90dd3cfee07f0337d2a0ff"
   end
 
   def install
