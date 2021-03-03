@@ -5,28 +5,28 @@
 class Bizaar < Formula
   desc "CLI for interacting with your Bizaar apps"
   homepage "https://github.com/civo/bizaar-cli"
-  version "0.0.10"
+  version "0.0.12"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.10/bizaar-0.0.10-darwin-amd64.tar.gz"
-    sha256 "35d692550a167abfe1d06591ca9c25ad44b69f032800f8b7a8964154b7a3905b"
+    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.12/bizaar-0.0.12-darwin-amd64.tar.gz"
+    sha256 "0a398b54b1838d44250a9b43d834b7ddac929888d9ad82fdba498e14e1b45ef2"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.10/bizaar-0.0.10-darwin-arm64.tar.gz"
-    sha256 "450d9fe9453e70590f13d499b08baea2ddbbcdb8ad4dfcc1913568268ff97727"
+    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.12/bizaar-0.0.12-darwin-arm64.tar.gz"
+    sha256 "1aa503d6ceb954794895c5a0df7a83a29f726507e344b873b3191e8b103378d4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.10/bizaar-0.0.10-linux-amd64.tar.gz"
-    sha256 "78ee7cd92c07ec88e8c186b9a10f9f8ece1a5ea10bc60fcd220119cd052edee2"
+    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.12/bizaar-0.0.12-linux-amd64.tar.gz"
+    sha256 "0b3375ea1c3bde627c771ec210ac3c0b534c454f78618046ee0c2f9506ab5d91"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.10/bizaar-0.0.10-linux-arm.tar.gz"
-    sha256 "5bc2ff5979e82b587bb182e4c1d45125b7487fdcc8c3e626750e39ad27f98e18"
+    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.12/bizaar-0.0.12-linux-arm.tar.gz"
+    sha256 "bfc9d40dca4106f30c7d7c19468db72bb93e5ee831ae893336766de17c693e2b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.10/bizaar-0.0.10-linux-arm64.tar.gz"
-    sha256 "fa10707407eab0a1258addfa63d8ad5ac6fbbdd21ddb8bb6642797b7675e0493"
+    url "https://github.com/civo/bizaar-cli/releases/download/v0.0.12/bizaar-0.0.12-linux-arm64.tar.gz"
+    sha256 "ee6169f8663e3ed3b684b9efdfcb52ca3adcba4b0f3f98689bc4ae4d9d93c6ec"
   end
 
   def install
