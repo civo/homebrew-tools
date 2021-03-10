@@ -5,28 +5,28 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "0.7.6"
+  version "0.7.7"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/civo/cli/releases/download/v0.7.6/civo-0.7.6-darwin-amd64.tar.gz"
-    sha256 "6cf02d26d3e0e626db2a44579a9ebfb5105b786c49af1e1efc249700a76ca194"
+    url "https://github.com/civo/cli/releases/download/v0.7.7/civo-0.7.7-darwin-amd64.tar.gz"
+    sha256 "b2d38e2d012d8f7ebf666ac7ceb0bb925a8904a93602dea533b76295dd050fa6"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/civo/cli/releases/download/v0.7.6/civo-0.7.6-darwin-arm64.tar.gz"
-    sha256 "8d369008409322f3904ba407c79516e8b62d3a9b2209e4048f99ce4fe3ea554f"
+    url "https://github.com/civo/cli/releases/download/v0.7.7/civo-0.7.7-darwin-arm64.tar.gz"
+    sha256 "f1a0be3e88399c452f66b46935ca33d17903b3db62e2a824b7574e2dc9f35b91"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/civo/cli/releases/download/v0.7.6/civo-0.7.6-linux-amd64.tar.gz"
-    sha256 "f99fd1865389fcf63c172f98cab9b5b7a0c6b5e4aa80f6c7785e35f37b715518"
+    url "https://github.com/civo/cli/releases/download/v0.7.7/civo-0.7.7-linux-amd64.tar.gz"
+    sha256 "b835c9262b242b3461a1b8508d003ca686621735257dc3591d7a3e57771a7426"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.6/civo-0.7.6-linux-arm.tar.gz"
-    sha256 "51c7423beee1110a1d65447510d94ecc8f6013b4410c29c391b0822c1e96dd0d"
+    url "https://github.com/civo/cli/releases/download/v0.7.7/civo-0.7.7-linux-arm.tar.gz"
+    sha256 "e304cd16e0392a6cb699c00b6d564ff30b8cd1c3002cef6995d4f363bc8fb055"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.6/civo-0.7.6-linux-arm64.tar.gz"
-    sha256 "4f3bbd018998573be854f837bdf37dc9c85a25d9069e60cc2ef0cc4e9d30df56"
+    url "https://github.com/civo/cli/releases/download/v0.7.7/civo-0.7.7-linux-arm64.tar.gz"
+    sha256 "c483e6b3931fc7457689e13e64c4d7050166cc179eb9ec3e3919aa34f132405c"
   end
 
   def install
