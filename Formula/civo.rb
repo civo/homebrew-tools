@@ -5,28 +5,28 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "0.7.18"
+  version "0.7.19"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/civo/cli/releases/download/v0.7.18/civo-0.7.18-darwin-amd64.tar.gz"
-    sha256 "a09e27c88d1d88157d3fa80ba85801cb3a76d38103bd2de07c6b2860dda28d08"
+    url "https://github.com/civo/cli/releases/download/v0.7.19/civo-0.7.19-darwin-amd64.tar.gz"
+    sha256 "c12b81f02d86f3e7e547bd06350b0e40dcf1acd83d3c430add3c95f0e020094e"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/civo/cli/releases/download/v0.7.18/civo-0.7.18-darwin-arm64.tar.gz"
-    sha256 "2ebd2b04df5cb3d4de3880f106c923dde6ce78cd9fc0b7712a2f5ad7760e359c"
+    url "https://github.com/civo/cli/releases/download/v0.7.19/civo-0.7.19-darwin-arm64.tar.gz"
+    sha256 "47c5599ed1e5f4f8203749ba514c8b45e1f7b9760e6b7686ff43351d925909cb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/civo/cli/releases/download/v0.7.18/civo-0.7.18-linux-amd64.tar.gz"
-    sha256 "0838af003758c37f97be17a0622601bcfba2d2902f2c80ba77998819ae730a3d"
+    url "https://github.com/civo/cli/releases/download/v0.7.19/civo-0.7.19-linux-amd64.tar.gz"
+    sha256 "74b1d8391e58303a4c4c7d9f2aee27dfbd5c2f21bae99b8a8581363e0a078e7a"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.18/civo-0.7.18-linux-arm.tar.gz"
-    sha256 "4dd81558ef4ea9af53e108c72ad03f6aa75853441f22b93ef3b31fd0646b1e33"
+    url "https://github.com/civo/cli/releases/download/v0.7.19/civo-0.7.19-linux-arm.tar.gz"
+    sha256 "2a1ca13818c80d410e34377215c9429298d16634de2dae30cab3c6d2f47b36bc"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/civo/cli/releases/download/v0.7.18/civo-0.7.18-linux-arm64.tar.gz"
-    sha256 "644e5f1ffb040e1d85be2e124508cae25a62133b8f68b455bf54c7ce00b54f40"
+    url "https://github.com/civo/cli/releases/download/v0.7.19/civo-0.7.19-linux-arm64.tar.gz"
+    sha256 "daf9f6b47dbd671db609d8af7aea683248ae64111f95d66287d5e481ecc6fec3"
   end
 
   def install
