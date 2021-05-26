@@ -5,28 +5,28 @@
 class Kubemart < Formula
   desc "CLI for interacting with your Kubemart apps"
   homepage "https://github.com/kubemart/kubemart-cli"
-  version "0.0.29"
+  version "0.0.30"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.29/kubemart-0.0.29-darwin-amd64.tar.gz"
-    sha256 "30f4beed6906d2f4c2f3e809571bee259843378a55e6b734af00736bcdaa1c01"
+    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.30/kubemart-0.0.30-darwin-amd64.tar.gz"
+    sha256 "50a0b85dbae004cb0fe2a889d965b5649d3c46f0cdcab11e139bf35ce8ffa20c"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.29/kubemart-0.0.29-darwin-arm64.tar.gz"
-    sha256 "1658a384455dfea961f8892f09f65788d05737666e1839d0bcd6168ebcf383a2"
+    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.30/kubemart-0.0.30-darwin-arm64.tar.gz"
+    sha256 "4eb6c2cfcd95a2eac7dcb84fb3553961f6f6e557c5573fad1d8decf8be712356"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.29/kubemart-0.0.29-linux-amd64.tar.gz"
-    sha256 "5f39bafbe6910fa6c9465f33387d4f70ca6f18597314bb37b19574f65227f182"
+    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.30/kubemart-0.0.30-linux-amd64.tar.gz"
+    sha256 "0b47597abe347d857da32394fc37fa1b5dd7af429883d890d16c57ed09954de4"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.29/kubemart-0.0.29-linux-arm.tar.gz"
-    sha256 "377185b79917dec5b0e31b5ea415495cc8d9262e7abd4217ca52cf7764edc3fb"
+    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.30/kubemart-0.0.30-linux-arm.tar.gz"
+    sha256 "939f5775060227abd7ee87b159fd9e0594039aab57dd1399cd003bb943f4bc62"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.29/kubemart-0.0.29-linux-arm64.tar.gz"
-    sha256 "9d366a86a0c0f389a149482e12143ecb540358621323ba57ed416823adaa80c8"
+    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.30/kubemart-0.0.30-linux-arm64.tar.gz"
+    sha256 "c1f9221588fc17d27020571fe431292e78b8abda0d873c3883edb7b54b23b576"
   end
 
   def install
