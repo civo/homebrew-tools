@@ -5,28 +5,33 @@
 class Kubemart < Formula
   desc "CLI for interacting with your Kubemart apps"
   homepage "https://github.com/kubemart/kubemart-cli"
-  version "0.0.32"
+  version "0.0.33"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.32/kubemart-0.0.32-darwin-amd64.tar.gz"
-    sha256 "4e3e957aed47a326c8c0b82fadd83073e879ef4caac8801f98e77723727e1541"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.33/kubemart-0.0.33-darwin-amd64.tar.gz"
+      sha256 "ed729cb1bcd8a366ac01115ebadc1faf32f5e059d7677f44ffbc193c15adee2b"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.33/kubemart-0.0.33-darwin-arm64.tar.gz"
+      sha256 "44cb62c87b978b4d49aafc859721ab3a998db9d1b0110f4d8460f72f74d52127"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.32/kubemart-0.0.32-darwin-arm64.tar.gz"
-    sha256 "3aa49f01b842c02982186d170026308d33ab45018003b973d6716c92e81bed1a"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.32/kubemart-0.0.32-linux-amd64.tar.gz"
-    sha256 "aa16f751228a8361a15a098e278e8421bde493e2c0e459021e3ea703385645e3"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.32/kubemart-0.0.32-linux-arm.tar.gz"
-    sha256 "fefa9dcb2c7cd9acdad948032beced864153078c073b2157310f57ba80a80dd2"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.32/kubemart-0.0.32-linux-arm64.tar.gz"
-    sha256 "779bfc932ffd907ba6c880336283aecda6ea588fb5fcfd69c1eac4f52c9c8ca7"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.33/kubemart-0.0.33-linux-amd64.tar.gz"
+      sha256 "3ae6ada700a5e56b82daf682d9f1038ada1f52a3d301e04b57aa1aa96a6a244e"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.33/kubemart-0.0.33-linux-arm.tar.gz"
+      sha256 "831c33fcf3cafda6e11c5b90f013cc5d24c59b182e337da751d3455baacd4f6d"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubemart/kubemart-cli/releases/download/v0.0.33/kubemart-0.0.33-linux-arm64.tar.gz"
+      sha256 "f1bad2a290ef9810248ea96ecd86db1229cad31379f72447714e0bf224d0815c"
+    end
   end
 
   def install
