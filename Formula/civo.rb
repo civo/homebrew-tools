@@ -5,32 +5,32 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "0.7.27"
+  version "0.7.28"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v0.7.27/civo-0.7.27-darwin-amd64.tar.gz"
-      sha256 "0e5b8c0d61775a6fd0867837ff295e2da882cdeac3e1bb20230f8a47f3326590"
+      url "https://github.com/civo/cli/releases/download/v0.7.28/civo-0.7.28-darwin-amd64.tar.gz"
+      sha256 "de71b1d51693210b728dac6e8963b914fc44132644f1705be0c7680aa1f9e7d0"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/civo/cli/releases/download/v0.7.27/civo-0.7.27-darwin-arm64.tar.gz"
-      sha256 "0f9d6086b2f26b7dd922f0f41c4e3b1d9c82446fc6b29ee3165fede14c4b0cba"
+      url "https://github.com/civo/cli/releases/download/v0.7.28/civo-0.7.28-darwin-arm64.tar.gz"
+      sha256 "2a6a0350a129fe2da82310fbe17030e4a3bd0c368a6503631bee9a4c2a448949"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v0.7.27/civo-0.7.27-linux-amd64.tar.gz"
-      sha256 "52634214bebcb615abaf2284016bdbc7c4fb9cabfb089a3d717f446c4cb16cba"
+      url "https://github.com/civo/cli/releases/download/v0.7.28/civo-0.7.28-linux-amd64.tar.gz"
+      sha256 "06ab8fa8bcabd4120097f33008999337667067959a739bc83e79c202d2110bb4"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v0.7.27/civo-0.7.27-linux-arm.tar.gz"
-      sha256 "99559994b45fe27464b07c32d99f743f0c52045ca42fc07bf7aa7167655e6df3"
+      url "https://github.com/civo/cli/releases/download/v0.7.28/civo-0.7.28-linux-arm.tar.gz"
+      sha256 "a21344620d766411440d1804e1f971db5118578067ca2e7b8dc3a3264fc98527"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v0.7.27/civo-0.7.27-linux-arm64.tar.gz"
-      sha256 "e44cf0886d445da1bf66dab172af63153d479c58f756bc9722acc215817dc052"
+      url "https://github.com/civo/cli/releases/download/v0.7.28/civo-0.7.28-linux-arm64.tar.gz"
+      sha256 "b381b624f2e8e9b213f0b55ec73d3a4cebd607c5a317f1e4ebfd25cdbfcc339a"
     end
   end
 
