@@ -5,32 +5,32 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "1.0.0"
+  version "1.0.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/civo/cli/releases/download/v1.0.0/civo-1.0.0-darwin-arm64.tar.gz"
-      sha256 "f8b290586d8b25cfe8b672bce95a459e034319e9f147f573a4244bb6cd878f57"
+      url "https://github.com/civo/cli/releases/download/v1.0.1/civo-1.0.1-darwin-arm64.tar.gz"
+      sha256 "a6707036b6ec9e2d9efe647ea812a3b816483f8e59386204f92707e21115358d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v1.0.0/civo-1.0.0-darwin-amd64.tar.gz"
-      sha256 "98e082aed3fb42981346ddbd0f21f6c718daadfac6835f2a73c1e167a1baff49"
+      url "https://github.com/civo/cli/releases/download/v1.0.1/civo-1.0.1-darwin-amd64.tar.gz"
+      sha256 "449c28a365b5b0a4d7a15861df9547bb1dfe7b02aee38f6bbbc7afe30980b89d"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v1.0.0/civo-1.0.0-linux-amd64.tar.gz"
-      sha256 "46bcee4bb5d635ac45c9e2f5f2c341c566360424211d01a5f869da5e92eb27f9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/civo/cli/releases/download/v1.0.1/civo-1.0.1-linux-arm64.tar.gz"
+      sha256 "c4873cb02d0b9e4120e15d7e7a71e3a8db39a6994244df76264a2109e7811f7a"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v1.0.0/civo-1.0.0-linux-arm.tar.gz"
-      sha256 "280f9f8d92cd5b02ffa64892c1ca2492ddab5a03fed5e39a533190f10e43b643"
+      url "https://github.com/civo/cli/releases/download/v1.0.1/civo-1.0.1-linux-arm.tar.gz"
+      sha256 "c3e985af3cde9c28caef813bd44d979f209256a3f5133fb74bc8152d6575dd7d"
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v1.0.0/civo-1.0.0-linux-arm64.tar.gz"
-      sha256 "f8f6e2964cf4fc203cb3ce1c03e9557fe13deecc7fe6494526e9e5b8bb0c3a0d"
+    if Hardware::CPU.intel?
+      url "https://github.com/civo/cli/releases/download/v1.0.1/civo-1.0.1-linux-amd64.tar.gz"
+      sha256 "c9fb1bc60075c56ab4173ff067e8bc4ac9986dc7e083675ae03131f999de29b3"
     end
   end
 
