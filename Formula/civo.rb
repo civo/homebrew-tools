@@ -5,20 +5,20 @@
 class Civo < Formula
   desc "CLI for managing Civo resources."
   homepage "https://github.com/civo/cli"
-  version "1.0.81"
+  version "1.0.82"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v1.0.81/civo-1.0.81-darwin-amd64.tar.gz"
-      sha256 "bcdb43f0d1903428a17867ee329c4f3df7b236481e54212e38f8d264857d0f60"
+      url "https://github.com/civo/cli/releases/download/v1.0.82/civo-1.0.82-darwin-amd64.tar.gz"
+      sha256 "6a5ef8170b60a31e03277cdefd657dbd4443fb6c6aa508658ecdfe286eb82279"
 
       def install
         bin.install "civo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/civo/cli/releases/download/v1.0.81/civo-1.0.81-darwin-arm64.tar.gz"
-      sha256 "34af3f6f23bd0e0e72b2cc8168a27130d299b589994e1573ef186962d16ad75a"
+      url "https://github.com/civo/cli/releases/download/v1.0.82/civo-1.0.82-darwin-arm64.tar.gz"
+      sha256 "bf79172a7a5fc77f9c5168428e8239046d1e6ae61a56286489ff5c9e7d90f424"
 
       def install
         bin.install "civo"
@@ -28,24 +28,24 @@ class Civo < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/civo/cli/releases/download/v1.0.81/civo-1.0.81-linux-amd64.tar.gz"
-      sha256 "0d38e94ae0da45c6b1f1e95299be3f2ee4782c2677c98a199abe1ec32503f9e8"
+      url "https://github.com/civo/cli/releases/download/v1.0.82/civo-1.0.82-linux-amd64.tar.gz"
+      sha256 "609a21d7c0f80ab9af882c8459a3c542ea28b56cfd68620726efb709e9919df6"
 
       def install
         bin.install "civo"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v1.0.81/civo-1.0.81-linux-arm.tar.gz"
-      sha256 "c2236629f6e3b09e425e22baf0de97df223eb3de592fc99a609fae87a755caf1"
+      url "https://github.com/civo/cli/releases/download/v1.0.82/civo-1.0.82-linux-arm.tar.gz"
+      sha256 "13130b6903ee4c5e7bf7d6a97cfa7bd4c362840843aecfff1011a3d0030caff4"
 
       def install
         bin.install "civo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/civo/cli/releases/download/v1.0.81/civo-1.0.81-linux-arm64.tar.gz"
-      sha256 "bf2ff39054f8d6c064e044a83067b96274934ebdda5caece13a5795883521429"
+      url "https://github.com/civo/cli/releases/download/v1.0.82/civo-1.0.82-linux-arm64.tar.gz"
+      sha256 "b2e9366d83a012aacc304ecfcb62aadae0caa59b996adeba047a0d35f68b8f59"
 
       def install
         bin.install "civo"
